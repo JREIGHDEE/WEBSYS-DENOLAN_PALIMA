@@ -1,83 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Table</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Table</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Data Table</h1>
-    <div class="container" style="display: flex; flex-wrap: wrap;">
-        <!-- Filter Form -->
-        <form id="filter-form" style="flex: 1;">
-            <label for="search">Search:</label>
-            <input type="text" id="search" name="search"><br><br>
-
-            <label>Gender:</label>
-            <input type="radio" id="male" name="gender" value="Male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="Female">
-            <label for="female">Female</label><br><br>
-
-            <label for="course">Course:</label>
-            <select id="course" name="course">
-                <option value="">Select Course</option>
-                <option value="BS-CS">BS-CS</option>
-                <option value="BS-DS">BS-DS</option>
-                <option value="BS-IS">BS-IS</option>
-                <option value="BS-IT">BS-IT</option>
-            </select>
-        </form>
-
-        <!-- Data Table -->
-        <table border="1" style="flex: 2; margin-left: 20px;">
-            <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Gender</th>
-                    <th>Course</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>Male</td>
-                    <td>BS-IT</td>
-                </tr>
-                <!-- Add 9 more rows as needed -->
-            </tbody>
-        </table>
+  <div class="container">
+    <!-- Table Section -->
+    <div class="table-container">
+      <h2>Data Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Gender</th>
+            <th>Course</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>Male</td>
+            <td>BS-IT</td>
+          </tr>
+          <tr>
+            <td>Jane</td>
+            <td>Smith</td>
+            <td>Female</td>
+            <td>BS-CS</td>
+          </tr>
+          <tr>
+            <td>Mark</td>
+            <td>Lee</td>
+            <td>Male</td>
+            <td>BS-IS</td>
+          </tr>
+          <tr>
+            <td>Maria</td>
+            <td>Santos</td>
+            <td>Female</td>
+            <td>BS-DS</td>
+          </tr>
+          <tr>
+            <td>Chris</td>
+            <td>Evans</td>
+            <td>Male</td>
+            <td>BS-CS</td>
+          </tr>
+          <tr>
+            <td>Emma</td>
+            <td>Watson</td>
+            <td>Female</td>
+            <td>BS-IT</td>
+          </tr>
+          <tr>
+            <td>Oliver</td>
+            <td>Brown</td>
+            <td>Male</td>
+            <td>BS-IS</td>
+          </tr>
+          <tr>
+            <td>Ella</td>
+            <td>Wilson</td>
+            <td>Female</td>
+            <td>BS-DS</td>
+          </tr>
+          <tr>
+            <td>Lucas</td>
+            <td>Martinez</td>
+            <td>Male</td>
+            <td>BS-IT</td>
+          </tr>
+          <tr>
+            <td>Sophia</td>
+            <td>Garcia</td>
+            <td>Female</td>
+            <td>BS-CS</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- Add Data Form -->
-    <div id="add-data-form" style="margin-top: 20px;">
-        <form>
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" required><br><br>
+    <!-- Form Section -->
+    <div class="form-container">
+      <h2>Add New Data</h2>
+      <form>
+        <label for="firstname">Firstname:</label>
+        <input type="text" id="firstname" name="firstname" required>
 
-            <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" required><br><br>
+        <label for="lastname">Lastname:</label>
+        <input type="text" id="lastname" name="lastname" required>
 
-            <label>Gender:</label>
-            <input type="radio" id="male" name="gender" value="Male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="Female">
-            <label for="female">Female</label><br><br>
+        <label for="gender">Gender:</label>
+        <div>
+          <input type="radio" id="male" name="gender" value="Male">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="Female">
+          <label for="female">Female</label>
+        </div>
 
-            <label for="course">Course:</label>
-            <select id="course" name="course">
-                <option value="BS-CS">BS-CS</option>
-                <option value="BS-DS">BS-DS</option>
-                <option value="BS-IS">BS-IS</option>
-                <option value="BS-IT">BS-IT</option>
-            </select><br><br>
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+          <option value="BS-CS">BS-CS</option>
+          <option value="BS-DS">BS-DS</option>
+          <option value="BS-IS">BS-IS</option>
+          <option value="BS-IT">BS-IT</option>
+        </select>
 
-            <button type="button">Add</button>
-            <button type="reset">Reset</button>
-        </form>
+        <button type="submit">Add</button>
+        <button type="reset">Reset</button>
+      </form>
     </div>
+  </div>
 </body>
 </html>
-
