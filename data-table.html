@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Table</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Table Section -->
-    <div class="table-container">
+  <section>
+    <div class="box">
+      <!-- Table Section -->
       <h2>Data Table</h2>
       <table>
         <thead>
@@ -33,88 +33,40 @@
             <td>Female</td>
             <td>BS-CS</td>
           </tr>
-          <tr>
-            <td>Mark</td>
-            <td>Lee</td>
-            <td>Male</td>
-            <td>BS-IS</td>
-          </tr>
-          <tr>
-            <td>Maria</td>
-            <td>Santos</td>
-            <td>Female</td>
-            <td>BS-DS</td>
-          </tr>
-          <tr>
-            <td>Chris</td>
-            <td>Evans</td>
-            <td>Male</td>
-            <td>BS-CS</td>
-          </tr>
-          <tr>
-            <td>Emma</td>
-            <td>Watson</td>
-            <td>Female</td>
-            <td>BS-IT</td>
-          </tr>
-          <tr>
-            <td>Oliver</td>
-            <td>Brown</td>
-            <td>Male</td>
-            <td>BS-IS</td>
-          </tr>
-          <tr>
-            <td>Ella</td>
-            <td>Wilson</td>
-            <td>Female</td>
-            <td>BS-DS</td>
-          </tr>
-          <tr>
-            <td>Lucas</td>
-            <td>Martinez</td>
-            <td>Male</td>
-            <td>BS-IT</td>
-          </tr>
-          <tr>
-            <td>Sophia</td>
-            <td>Garcia</td>
-            <td>Female</td>
-            <td>BS-CS</td>
-          </tr>
+          <!-- Add more rows as needed -->
         </tbody>
       </table>
     </div>
 
     <!-- Form Section -->
-    <div class="form-container">
+    <div class="box">
       <h2>Add New Data</h2>
       <form>
-        <label for="firstname">Firstname:</label>
-        <input type="text" id="firstname" name="firstname" required>
-
-        <label for="lastname">Lastname:</label>
-        <input type="text" id="lastname" name="lastname" required>
-
-        <label for="gender">Gender:</label>
-        <div>
-          <input type="radio" id="male" name="gender" value="Male">
-          <label for="male">Male</label>
-          <input type="radio" id="female" name="gender" value="Female">
-          <label for="female">Female</label>
+        <div class="input-field">
+          <input type="text" id="firstname" name="firstname" required>
+          <label for="firstname">Firstname:</label>
         </div>
-
-        <label for="course">Course:</label>
-        <select id="course" name="course" required>
-          <option value="BS-CS">BS-CS</option>
-          <option value="BS-DS">BS-DS</option>
-          <option value="BS-IS">BS-IS</option>
-          <option value="BS-IT">BS-IT</option>
-        </select>
-
+        <div class="input-field">
+          <input type="text" id="lastname" name="lastname" required>
+          <label for="lastname">Lastname:</label>
+        </div>
+        <div>
+          <label for="gender">Gender:</label>
+          <input type="radio" id="male" name="gender" value="Male"><label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="Female"><label for="female">Female</label>
+        </div>
+        <div class="input-field">
+          <select id="course" name="course" required>
+            <option value="BS-CS">BS-CS</option>
+            <option value="BS-DS">BS-DS</option>
+            <option value="BS-IS">BS-IS</option>
+            <option value="BS-IT">BS-IT</option>
+          </select>
+        </div>
         <button type="submit">Add</button>
         <button type="reset">Reset</button>
       </form>
     </div>
-  </div>
+  </section>
 </body>
 </html>
